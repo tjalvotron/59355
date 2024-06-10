@@ -1,6 +1,6 @@
 import datetime
 
-# reads a file and returns list of list in format time, id , Ind/Ud
+# reads a file and returns list of lists of lines in the file
 def read(file_path): 
     try:
         l = []
@@ -14,6 +14,12 @@ def read(file_path):
     
 # takes list and saves it in a file
 def save(m,file_path):
+    n=s(m)
+    with open(file_path, 'a') as file:
+        file.write(n)
+
+# takes varible and makes str to save in file
+def s(m):
     n = ''
     t=type(m)
     print(t)
@@ -28,14 +34,13 @@ def save(m,file_path):
     elif isinstance(m,str) or isinstance(m,int) or isinstance(m,float) or isinstance(m,bool):
         n = m
     print(n)
-    with open(file_path, 'a') as file:
-        file.write(n)
+    return n
 
-# uses list af Name and RFID number and saves it in a file
+# uses list of lists/info and makes a new file whith it (if file already exists it gets owerwriten)
 def save_man(m,file_path):
     with open(file_path, 'w') as file:
         for i in m:
-            n = str(i[0]) + '|' + str(i[1]) + '\n'
+            n = s(i)
             print(n)
             file.write(n)
 
