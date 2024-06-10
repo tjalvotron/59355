@@ -1,3 +1,6 @@
+# Made by tjalvotron
+print(Made by tjalvotron)
+
 import datetime
 
 # reads a file and returns list of lists of lines in the file
