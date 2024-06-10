@@ -1,5 +1,5 @@
 # Made by tjalvotron
-print(Made by tjalvotron)
+print('Made by tjalvotron')
 
 import datetime
 
