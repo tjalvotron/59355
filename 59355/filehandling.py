@@ -165,7 +165,7 @@ def test(id=0,i_o=0):
                     m.append(i_o)
                 else:
                     m.append(input('Ind/Ud: '))
-                save(m)
+                save(m,file_path)
         except ValueError:
             print("Invalid input. Please enter a valid number.")
 
